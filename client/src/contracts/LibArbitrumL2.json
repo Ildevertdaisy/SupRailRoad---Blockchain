@@ -1,0 +1,1022 @@
+{
+  "contractName": "LibArbitrumL2",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ARBSYS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ARBSYS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Primitives for cross-chain aware contracts for https://arbitrum.io/[Arbitrum]. This version should only be used on L2 to process cross-chain messages originating from L1. For the other side, use {LibArbitrumL1}.\",\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"ARBSYS\":{\"details\":\"Returns whether the current function call is the result of a cross-chain message relayed by `arbsys`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/@openzeppelin/contracts/crosschain/arbitrum/LibArbitrumL2.sol\":\"LibArbitrumL2\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/@openzeppelin/contracts/crosschain/arbitrum/LibArbitrumL2.sol\":{\"keccak256\":\"0x95505885405b84bce7a8d6c0f6e6b0716ca2c56ad234901df913dbf4dd4e9099\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dea4668367ea06b5960ab161df9549e2ad19c7f9eab4bc160adc82e7657c7213\",\"dweb:/ipfs/QmaBvxwQGV4RxwHgkSmEzr1Q2sgnnoJzwGX8k9PzDm7f9w\"]},\"project:/contracts/@openzeppelin/contracts/crosschain/errors.sol\":{\"keccak256\":\"0xa1e9b651a2427925598b49ef35da5930abc07859cfac5b9dfb1912f063a024b3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c514518c36a3fb1c5f1a99d88857e93160c72ea1fd728c443406ad1acb43ae9a\",\"dweb:/ipfs/Qmc3oXjBNhdeM5cfWpsvewXZAhH34Scgna2W3MvLaiiapQ\"]},\"project:/contracts/@openzeppelin/contracts/vendor/arbitrum/IArbSys.sol\":{\"keccak256\":\"0x5771b4977f37342f1a5bf6495a8418b478583836f9362fcbbf055d77bb620ad6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8cfc6c57583b11feaf377863ce8f95eb2674c63dca009d8cbee467707a611aa8\",\"dweb:/ipfs/QmeeQLjwWtnpEfXqhGgTs4cnLp2cKAxAH2CfkizGoAzABE\"]}},\"version\":1}",
+  "bytecode": "0x60dd61004d600b8282823980515f1a607314610041577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106032575f3560e01c8063bf0a12cf146036575b5f80fd5b603c6050565b604051604791906090565b60405180910390f35b606481565b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f607c826055565b9050919050565b608a816074565b82525050565b5f60208201905060a15f8301846083565b9291505056fea2646970667358221220530f2aae65eb7484fb93185ef14f0dc9a1c96e9c22cd221cb4268d39c911b59d64736f6c63430008150033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106032575f3560e01c8063bf0a12cf146036575b5f80fd5b603c6050565b604051604791906090565b60405180910390f35b606481565b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f607c826055565b9050919050565b608a816074565b82525050565b5f60208201905060a15f8301846083565b9291505056fea2646970667358221220530f2aae65eb7484fb93185ef14f0dc9a1c96e9c22cd221cb4268d39c911b59d64736f6c63430008150033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nativeSrc": "0:614:325",
+        "nodeType": "YulBlock",
+        "src": "0:614:325",
+        "statements": [
+          {
+            "body": {
+              "nativeSrc": "52:81:325",
+              "nodeType": "YulBlock",
+              "src": "52:81:325",
+              "statements": [
+                {
+                  "nativeSrc": "62:65:325",
+                  "nodeType": "YulAssignment",
+                  "src": "62:65:325",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nativeSrc": "77:5:325",
+                        "nodeType": "YulIdentifier",
+                        "src": "77:5:325"
+                      },
+                      {
+                        "kind": "number",
+                        "nativeSrc": "84:42:325",
+                        "nodeType": "YulLiteral",
+                        "src": "84:42:325",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nativeSrc": "73:3:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "73:3:325"
+                    },
+                    "nativeSrc": "73:54:325",
+                    "nodeType": "YulFunctionCall",
+                    "src": "73:54:325"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nativeSrc": "62:7:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "62:7:325"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nativeSrc": "7:126:325",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nativeSrc": "34:5:325",
+                "nodeType": "YulTypedName",
+                "src": "34:5:325",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nativeSrc": "44:7:325",
+                "nodeType": "YulTypedName",
+                "src": "44:7:325",
+                "type": ""
+              }
+            ],
+            "src": "7:126:325"
+          },
+          {
+            "body": {
+              "nativeSrc": "184:51:325",
+              "nodeType": "YulBlock",
+              "src": "184:51:325",
+              "statements": [
+                {
+                  "nativeSrc": "194:35:325",
+                  "nodeType": "YulAssignment",
+                  "src": "194:35:325",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nativeSrc": "223:5:325",
+                        "nodeType": "YulIdentifier",
+                        "src": "223:5:325"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nativeSrc": "205:17:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "205:17:325"
+                    },
+                    "nativeSrc": "205:24:325",
+                    "nodeType": "YulFunctionCall",
+                    "src": "205:24:325"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nativeSrc": "194:7:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "194:7:325"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address",
+            "nativeSrc": "139:96:325",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nativeSrc": "166:5:325",
+                "nodeType": "YulTypedName",
+                "src": "166:5:325",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nativeSrc": "176:7:325",
+                "nodeType": "YulTypedName",
+                "src": "176:7:325",
+                "type": ""
+              }
+            ],
+            "src": "139:96:325"
+          },
+          {
+            "body": {
+              "nativeSrc": "314:53:325",
+              "nodeType": "YulBlock",
+              "src": "314:53:325",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nativeSrc": "331:3:325",
+                        "nodeType": "YulIdentifier",
+                        "src": "331:3:325"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nativeSrc": "354:5:325",
+                            "nodeType": "YulIdentifier",
+                            "src": "354:5:325"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_address",
+                          "nativeSrc": "336:17:325",
+                          "nodeType": "YulIdentifier",
+                          "src": "336:17:325"
+                        },
+                        "nativeSrc": "336:24:325",
+                        "nodeType": "YulFunctionCall",
+                        "src": "336:24:325"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nativeSrc": "324:6:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "324:6:325"
+                    },
+                    "nativeSrc": "324:37:325",
+                    "nodeType": "YulFunctionCall",
+                    "src": "324:37:325"
+                  },
+                  "nativeSrc": "324:37:325",
+                  "nodeType": "YulExpressionStatement",
+                  "src": "324:37:325"
+                }
+              ]
+            },
+            "name": "abi_encode_t_address_to_t_address_fromStack_library",
+            "nativeSrc": "241:126:325",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nativeSrc": "302:5:325",
+                "nodeType": "YulTypedName",
+                "src": "302:5:325",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nativeSrc": "309:3:325",
+                "nodeType": "YulTypedName",
+                "src": "309:3:325",
+                "type": ""
+              }
+            ],
+            "src": "241:126:325"
+          },
+          {
+            "body": {
+              "nativeSrc": "479:132:325",
+              "nodeType": "YulBlock",
+              "src": "479:132:325",
+              "statements": [
+                {
+                  "nativeSrc": "489:26:325",
+                  "nodeType": "YulAssignment",
+                  "src": "489:26:325",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nativeSrc": "501:9:325",
+                        "nodeType": "YulIdentifier",
+                        "src": "501:9:325"
+                      },
+                      {
+                        "kind": "number",
+                        "nativeSrc": "512:2:325",
+                        "nodeType": "YulLiteral",
+                        "src": "512:2:325",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nativeSrc": "497:3:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "497:3:325"
+                    },
+                    "nativeSrc": "497:18:325",
+                    "nodeType": "YulFunctionCall",
+                    "src": "497:18:325"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nativeSrc": "489:4:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "489:4:325"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nativeSrc": "577:6:325",
+                        "nodeType": "YulIdentifier",
+                        "src": "577:6:325"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nativeSrc": "590:9:325",
+                            "nodeType": "YulIdentifier",
+                            "src": "590:9:325"
+                          },
+                          {
+                            "kind": "number",
+                            "nativeSrc": "601:1:325",
+                            "nodeType": "YulLiteral",
+                            "src": "601:1:325",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nativeSrc": "586:3:325",
+                          "nodeType": "YulIdentifier",
+                          "src": "586:3:325"
+                        },
+                        "nativeSrc": "586:17:325",
+                        "nodeType": "YulFunctionCall",
+                        "src": "586:17:325"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_address_to_t_address_fromStack_library",
+                      "nativeSrc": "525:51:325",
+                      "nodeType": "YulIdentifier",
+                      "src": "525:51:325"
+                    },
+                    "nativeSrc": "525:79:325",
+                    "nodeType": "YulFunctionCall",
+                    "src": "525:79:325"
+                  },
+                  "nativeSrc": "525:79:325",
+                  "nodeType": "YulExpressionStatement",
+                  "src": "525:79:325"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_address__to_t_address__fromStack_library_reversed",
+            "nativeSrc": "373:238:325",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nativeSrc": "451:9:325",
+                "nodeType": "YulTypedName",
+                "src": "451:9:325",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nativeSrc": "463:6:325",
+                "nodeType": "YulTypedName",
+                "src": "463:6:325",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nativeSrc": "474:4:325",
+                "nodeType": "YulTypedName",
+                "src": "474:4:325",
+                "type": ""
+              }
+            ],
+            "src": "373:238:325"
+          }
+        ]
+      },
+      "contents": "{\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack_library(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_library_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack_library(value0,  add(headStart, 0))\n\n    }\n\n}\n",
+      "id": 325,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "491:975:164:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "491:975:164:-:0;;;;;;;;;;;;;;;;;;;;;;;;656:75;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;689:42;656:75;:::o;7:126:325:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:126::-;336:24;354:5;336:24;:::i;:::-;331:3;324:37;241:126;;:::o;373:238::-;474:4;512:2;501:9;497:18;489:26;;525:79;601:1;590:9;586:17;577:6;525:79;:::i;:::-;373:238;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v4.7.2) (crosschain/arbitrum/LibArbitrumL2.sol)\n\npragma solidity ^0.8.4;\n\nimport {IArbSys as ArbitrumL2_Bridge} from \"../../vendor/arbitrum/IArbSys.sol\";\nimport \"../errors.sol\";\n\n/**\n * @dev Primitives for cross-chain aware contracts for\n * https://arbitrum.io/[Arbitrum].\n *\n * This version should only be used on L2 to process cross-chain messages\n * originating from L1. For the other side, use {LibArbitrumL1}.\n */\nlibrary LibArbitrumL2 {\n    /**\n     * @dev Returns whether the current function call is the result of a\n     * cross-chain message relayed by `arbsys`.\n     */\n    address public constant ARBSYS = 0x0000000000000000000000000000000000000064;\n\n    function isCrossChain(address arbsys) internal view returns (bool) {\n        return ArbitrumL2_Bridge(arbsys).wasMyCallersAddressAliased();\n    }\n\n    /**\n     * @dev Returns the address of the sender that triggered the current\n     * cross-chain message through `arbsys`.\n     *\n     * NOTE: {isCrossChain} should be checked before trying to recover the\n     * sender, as it will revert with `NotCrossChainCall` if the current\n     * function call is not the result of a cross-chain message.\n     */\n    function crossChainSender(address arbsys) internal view returns (address) {\n        if (!isCrossChain(arbsys)) revert NotCrossChainCall();\n\n        return ArbitrumL2_Bridge(arbsys).myCallersAddressWithoutAliasing();\n    }\n}\n",
+  "sourcePath": "C:\\Users\\Ildevert Daisy\\Documents\\Playgrounds\\5BLOC\\mkt-project\\contracts\\@openzeppelin\\contracts\\crosschain\\arbitrum\\LibArbitrumL2.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/@openzeppelin/contracts/crosschain/arbitrum/LibArbitrumL2.sol",
+    "exportedSymbols": {
+      "ArbitrumL2_Bridge": [
+        27782
+      ],
+      "InvalidCrossChainSender": [
+        1370
+      ],
+      "LibArbitrumL2": [
+        1360
+      ],
+      "NotCrossChainCall": [
+        1364
+      ]
+    },
+    "id": 1361,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1314,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "121:23:164"
+      },
+      {
+        "absolutePath": "project:/contracts/@openzeppelin/contracts/vendor/arbitrum/IArbSys.sol",
+        "file": "../../vendor/arbitrum/IArbSys.sol",
+        "id": 1316,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1361,
+        "sourceUnit": 27783,
+        "src": "146:79:164",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1315,
+              "name": "IArbSys",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 27782,
+              "src": "154:7:164",
+              "typeDescriptions": {}
+            },
+            "local": "ArbitrumL2_Bridge",
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/@openzeppelin/contracts/crosschain/errors.sol",
+        "file": "../errors.sol",
+        "id": 1317,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1361,
+        "sourceUnit": 1371,
+        "src": "226:23:164",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LibArbitrumL2",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 1318,
+          "nodeType": "StructuredDocumentation",
+          "src": "251:239:164",
+          "text": " @dev Primitives for cross-chain aware contracts for\n https://arbitrum.io/[Arbitrum].\n This version should only be used on L2 to process cross-chain messages\n originating from L1. For the other side, use {LibArbitrumL1}."
+        },
+        "fullyImplemented": true,
+        "id": 1360,
+        "linearizedBaseContracts": [
+          1360
+        ],
+        "name": "LibArbitrumL2",
+        "nameLocation": "499:13:164",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "documentation": {
+              "id": 1319,
+              "nodeType": "StructuredDocumentation",
+              "src": "519:132:164",
+              "text": " @dev Returns whether the current function call is the result of a\n cross-chain message relayed by `arbsys`."
+            },
+            "functionSelector": "bf0a12cf",
+            "id": 1322,
+            "mutability": "constant",
+            "name": "ARBSYS",
+            "nameLocation": "680:6:164",
+            "nodeType": "VariableDeclaration",
+            "scope": 1360,
+            "src": "656:75:164",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1320,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "656:7:164",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307830303030303030303030303030303030303030303030303030303030303030303030303030303634",
+              "id": 1321,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "689:42:164",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x0000000000000000000000000000000000000064"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1335,
+              "nodeType": "Block",
+              "src": "805:78:164",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 1330,
+                            "name": "arbsys",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1324,
+                            "src": "840:6:164",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1329,
+                          "name": "ArbitrumL2_Bridge",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 27782,
+                          "src": "822:17:164",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IArbSys_$27782_$",
+                            "typeString": "type(contract IArbSys)"
+                          }
+                        },
+                        "id": 1331,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "822:25:164",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IArbSys_$27782",
+                          "typeString": "contract IArbSys"
+                        }
+                      },
+                      "id": 1332,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "848:26:164",
+                      "memberName": "wasMyCallersAddressAliased",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 27737,
+                      "src": "822:52:164",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
+                        "typeString": "function () view external returns (bool)"
+                      }
+                    },
+                    "id": 1333,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "822:54:164",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1328,
+                  "id": 1334,
+                  "nodeType": "Return",
+                  "src": "815:61:164"
+                }
+              ]
+            },
+            "id": 1336,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isCrossChain",
+            "nameLocation": "747:12:164",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1324,
+                  "mutability": "mutable",
+                  "name": "arbsys",
+                  "nameLocation": "768:6:164",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1336,
+                  "src": "760:14:164",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1323,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:7:164",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "759:16:164"
+            },
+            "returnParameters": {
+              "id": 1328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1327,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1336,
+                  "src": "799:4:164",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1326,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "799:4:164",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "798:6:164"
+            },
+            "scope": 1360,
+            "src": "738:145:164",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1358,
+              "nodeType": "Block",
+              "src": "1317:147:164",
+              "statements": [
+                {
+                  "condition": {
+                    "id": 1347,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "1331:21:164",
+                    "subExpression": {
+                      "arguments": [
+                        {
+                          "id": 1345,
+                          "name": "arbsys",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1339,
+                          "src": "1345:6:164",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1344,
+                        "name": "isCrossChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1336,
+                        "src": "1332:12:164",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                          "typeString": "function (address) view returns (bool)"
+                        }
+                      },
+                      "id": 1346,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1332:20:164",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1351,
+                  "nodeType": "IfStatement",
+                  "src": "1327:53:164",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 1348,
+                        "name": "NotCrossChainCall",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1364,
+                        "src": "1361:17:164",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 1349,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1361:19:164",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 1350,
+                    "nodeType": "RevertStatement",
+                    "src": "1354:26:164"
+                  }
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 1353,
+                            "name": "arbsys",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1339,
+                            "src": "1416:6:164",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1352,
+                          "name": "ArbitrumL2_Bridge",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 27782,
+                          "src": "1398:17:164",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IArbSys_$27782_$",
+                            "typeString": "type(contract IArbSys)"
+                          }
+                        },
+                        "id": 1354,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1398:25:164",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IArbSys_$27782",
+                          "typeString": "contract IArbSys"
+                        }
+                      },
+                      "id": 1355,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1424:31:164",
+                      "memberName": "myCallersAddressWithoutAliasing",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 27743,
+                      "src": "1398:57:164",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                        "typeString": "function () view external returns (address)"
+                      }
+                    },
+                    "id": 1356,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1398:59:164",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1343,
+                  "id": 1357,
+                  "nodeType": "Return",
+                  "src": "1391:66:164"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1337,
+              "nodeType": "StructuredDocumentation",
+              "src": "889:349:164",
+              "text": " @dev Returns the address of the sender that triggered the current\n cross-chain message through `arbsys`.\n NOTE: {isCrossChain} should be checked before trying to recover the\n sender, as it will revert with `NotCrossChainCall` if the current\n function call is not the result of a cross-chain message."
+            },
+            "id": 1359,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "crossChainSender",
+            "nameLocation": "1252:16:164",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1339,
+                  "mutability": "mutable",
+                  "name": "arbsys",
+                  "nameLocation": "1277:6:164",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1359,
+                  "src": "1269:14:164",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1338,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1269:7:164",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1268:16:164"
+            },
+            "returnParameters": {
+              "id": 1343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1342,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1359,
+                  "src": "1308:7:164",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1341,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:7:164",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1307:9:164"
+            },
+            "scope": 1360,
+            "src": "1243:221:164",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1361,
+        "src": "491:975:164",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "121:1346:164"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-03-24T15:08:15.819Z",
+  "devdoc": {
+    "details": "Primitives for cross-chain aware contracts for https://arbitrum.io/[Arbitrum]. This version should only be used on L2 to process cross-chain messages originating from L1. For the other side, use {LibArbitrumL1}.",
+    "kind": "dev",
+    "methods": {},
+    "stateVariables": {
+      "ARBSYS": {
+        "details": "Returns whether the current function call is the result of a cross-chain message relayed by `arbsys`."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

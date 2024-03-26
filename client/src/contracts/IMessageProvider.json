@@ -1,0 +1,229 @@
+{
+  "contractName": "IMessageProvider",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "messageNum",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "InboxMessageDelivered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "messageNum",
+          "type": "uint256"
+        }
+      ],
+      "name": "InboxMessageDeliveredFromOrigin",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"messageNum\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"InboxMessageDelivered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"messageNum\",\"type\":\"uint256\"}],\"name\":\"InboxMessageDeliveredFromOrigin\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/@openzeppelin/contracts/vendor/arbitrum/IMessageProvider.sol\":\"IMessageProvider\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/@openzeppelin/contracts/vendor/arbitrum/IMessageProvider.sol\":{\"keccak256\":\"0x313f5c576f539a5fa5b0827680f2faf30714f3b5e8cfd3fd01045869c790ca43\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://df59e59fad0c0bb2c82210a14b4ee6addc606fee300edcf3614261732226d514\",\"dweb:/ipfs/QmZh48V1KNYSdGqcVWhLxWStLu6uB45njnqKHmsFeERqjT\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\n// OpenZeppelin Contracts (last updated v4.6.0) (vendor/arbitrum/IMessageProvider.sol)\n\n/*\n * Copyright 2021, Offchain Labs, Inc.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npragma solidity ^0.8.0;\n\ninterface IMessageProvider {\n    event InboxMessageDelivered(uint256 indexed messageNum, bytes data);\n\n    event InboxMessageDeliveredFromOrigin(uint256 indexed messageNum);\n}\n",
+  "sourcePath": "C:\\Users\\Ildevert Daisy\\Documents\\Playgrounds\\5BLOC\\mkt-project\\contracts\\@openzeppelin\\contracts\\vendor\\arbitrum\\IMessageProvider.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/@openzeppelin/contracts/vendor/arbitrum/IMessageProvider.sol",
+    "exportedSymbols": {
+      "IMessageProvider": [
+        28042
+      ]
+    },
+    "id": 28043,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 28031,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "731:23:317"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMessageProvider",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 28042,
+        "linearizedBaseContracts": [
+          28042
+        ],
+        "name": "IMessageProvider",
+        "nameLocation": "766:16:317",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "eventSelector": "ff64905f73a67fb594e0f940a8075a860db489ad991e032f48c81123eb52d60b",
+            "id": 28037,
+            "name": "InboxMessageDelivered",
+            "nameLocation": "795:21:317",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 28036,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28033,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "messageNum",
+                  "nameLocation": "833:10:317",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28037,
+                  "src": "817:26:317",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28032,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "817:7:317",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28035,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "851:4:317",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28037,
+                  "src": "845:10:317",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 28034,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "845:5:317",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "816:40:317"
+            },
+            "src": "789:68:317"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "ab532385be8f1005a4b6ba8fa20a2245facb346134ac739fe9a5198dc1580b9c",
+            "id": 28041,
+            "name": "InboxMessageDeliveredFromOrigin",
+            "nameLocation": "869:31:317",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 28040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28039,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "messageNum",
+                  "nameLocation": "917:10:317",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28041,
+                  "src": "901:26:317",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28038,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "901:7:317",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "900:28:317"
+            },
+            "src": "863:66:317"
+          }
+        ],
+        "scope": 28043,
+        "src": "756:175:317",
+        "usedErrors": [],
+        "usedEvents": [
+          28037,
+          28041
+        ]
+      }
+    ],
+    "src": "731:201:317"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-03-24T15:08:16.278Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

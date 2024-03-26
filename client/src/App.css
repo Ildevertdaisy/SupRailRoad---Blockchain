@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.form_body {
+  height: 100%!important;
+}
+.img {
+  height: 250px;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+.nav-link.active {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.small {
+  font-size: 12px
+}
+.contract-info {
+  background-color: #9b59b6;
+  color: white;
+  border-radius: 4px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
